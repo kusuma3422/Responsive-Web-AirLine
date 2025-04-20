@@ -2,26 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Responsive Image Carousel</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Weather App</title>
+  <style>
+    body {
+      background-color: #1a1a2e;
+      color: #fff;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+    #weather {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1 class="carousel-heading">🌟 Featured Gallery Carousel</h1>
+  <h1>🌤️ Real-Time Weather</h1>
+  <input type="text" id="cityInput" placeholder="Enter city name" />
+  <button onclick="getWeather()">Check Weather</button>
 
-    <div class="carousel">
-      <div class="carousel-track">
-        <img src="https://picsum.photos/id/1015/600/400" class="carousel-img" alt="1">
-        <img src="https://picsum.photos/id/1016/600/400" class="carousel-img" alt="2">
-        <img src="https://picsum.photos/id/1018/600/400" class="carousel-img" alt="3">
-        <img src="https://picsum.photos/id/1020/600/400" class="carousel-img" alt="4">
-      </div>
-      <button class="carousel-btn prev">‹</button>
-      <button class="carousel-btn next">›</button>
-    </div>
-  </div>
+  <div id="weather"></div>
 
-  <script src="script.js"></script>
+  <script src="weather.js"></script>
 </body>
 </html>
