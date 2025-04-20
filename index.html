@@ -1,78 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SkyJet Airlines</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8">
+  <title>Responsive Image Carousel</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
 
-    <div class="logo">SkyJet</div>
-    <nav>
-      <ul class="nav-menu">
-        <li><a href="#">Flights</a></li>
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#">Offers</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section class="destinations">
-    <h2>Featured Destinations</h2>
-    <div class="card-container">
-      <div class="card">Paris</div>
-      <div class="card">Tokyo</div>
-      <div class="card">New York</div>
-      <div class="card">Dubai</div>
-    </div>
-  </section>
+  <div class="container">
+    <h1 class="carousel-heading">🌟 Featured Gallery Carousel</h1>
 
-  <section class="hero">
-    <h1>Find Your Flight</h1>
-    <form id="searchForm">
-      <input type="text" placeholder="From" required>
-      <input type="text" placeholder="To" required>
-      <input type="date" required>
-      <button type="submit">Search</button>
-
-    </form>
-    <div class="video-bg">
-      <video autoplay muted loop playsinline>
-        <source src="bg-video.mp4" type="video/mp4">
-      </video>
-    </div>
-    
-  </section>
-  
-
-  <section id="flightOptions" class="hidden">
-    <h2>Available Flights</h2>
-    <div class="flights-container">
-      <div class="flight-card" data-flight="SkyJet 103" data-price="5500">
-        <h3>SkyJet 103</h3>
-        <p>10:30 AM – ₹5,500</p>
-        <button class="book-btn">Book Flight</button>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="https://picsum.photos/id/1015/600/400" class="carousel-img" alt="1">
+        <img src="https://picsum.photos/id/1016/600/400" class="carousel-img" alt="2">
+        <img src="https://picsum.photos/id/1018/600/400" class="carousel-img" alt="3">
+        <img src="https://picsum.photos/id/1020/600/400" class="carousel-img" alt="4">
       </div>
-      <div class="flight-card" data-flight="SkyJet 204" data-price="6000">
-        <h3>SkyJet 204</h3>
-        <p>1:00 PM – ₹6,000</p>
-        <button class="book-btn">Book Flight</button>
-      </div>
+      <button class="carousel-btn prev">‹</button>
+      <button class="carousel-btn next">›</button>
     </div>
-  </section>
-  
-
-  <section id="seatSelection" class="hidden">
-    <h2>Select Your Seat</h2>
-    <div class="seat-map"></div>
-    <button id="confirmBtn">Confirm Booking</button>
-    <div id="confirmationMsg" class="hidden"></div>
-  </section>
-  <footer>
-    <p>&copy; 2025 SkyJet Airlines. All rights reserved.</p>
-  </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
