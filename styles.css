@@ -1,0 +1,255 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://res.cloudinary.com/dlcl5dozb/image/upload/v1745042063/Forget_Thanksgiving__You_Can_Travel_Around_The_World_For_1_263_This_November_Refinery29_rruqxq.jpg') no-repeat center center/cover;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #15317e;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #ffc107;
+}
+
+/* Featured Destinations */
+.destinations {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #111;
+}
+
+.destinations h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Hero Section - Flight Search */
+.hero {
+  
+  text-align: center;
+  padding: 3rem 1rem;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.hero form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero input,
+.hero button {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.hero input[type="text"],
+.hero input[type="date"] {
+  width: 150px;
+}
+
+.hero button {
+  background-color: #15317e;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #0f255c;
+}
+
+/* Flights Section */
+#flightOptions {
+  padding: 2rem;
+  text-align: center;
+}
+
+.flights-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.flight-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flight-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.flight-card button {
+  margin-top: 1rem;
+  background: #15317e;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.flight-card button:hover {
+  background: #0f255c;
+}
+
+/* Seat Selection */
+#seatSelection {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.seat-map {
+  display: grid;
+  grid-template-columns: repeat(6, 40px);
+  gap: 10px;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 300px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #bbf7d0;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #1e3a8a;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.seat.selected {
+  background: #3b82f6;
+  color: white;
+}
+
+.seat.booked {
+  background: #f87171;
+  color: white;
+  cursor: not-allowed;
+}
+
+#confirmBtn {
+  background: #28a745;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#confirmBtn:hover {
+  background: #218838;
+}
+
+/* Footer */
+footer {
+  background-color: #15317e;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  margin-top: 2rem;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flights-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
